@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Music</title>
+    <!--    引入外部css文件-->
+    <link href="favicon.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="css/music.css">
+</head>
+<body>
+<div class="m_body">
+    <!--横幅-->
+    <div class="banner">
+	
+        <ul>
+            <li class="m1" datasrc="ListeningDemos/sample1/noisy_demo_1.wav" title="sample1">
+                <img src="img/1.jpg" alt=""width="65">sample1
+            </li>
+            <li class="m2" datasrc="ListeningDemos/sample2/noisy_demo_2.wav" title="sample2">
+                <img src="img/2.jpg" alt=""width="90">sample2
+            </li>
+            <li class="m3" datasrc="ListeningDemos/sample3/noisy_demo_3.wav" title="sample3">
+                <img src="img/3.jpg" alt=""width="119">sample3
+            </li>
+            <li class="m4" datasrc="ListeningDemos/sample4/noisy_demo_4.wav" title="sample4">
+                <img src="img/4.jpg" alt=""width="90">sample4
+            </li>
+            <li class="m5" datasrc="ListeningDemos/sample5/noisy_demo_5.wav" title="sample5">
+                <img src="img/5.jpg" alt=""width="65">sample5
+            </li>
+			<li class="m6" datasrc="ListeningDemos/sample6/noisy_demo_6.wav" title="sample6">
+                <img src="img/6.jpg" alt=""width="65">sample6
+            </li>
+        </ul>
+    </div>
+    <!--横幅-->
+		<div class="model">
+		 <a href="#" class="m_model model_hover" title="noisy_demo" data-title="Param=-, MAC/S=- ">noisy</a>
+		 <a href="#" class="m_model" title="CRN_demo" data-title="Param=17.58M, MAC/S=2.54G ">CRN</a>
+		 <a href="#" class="m_model" title="MSTCN_demo" data-title="Param=4.78M, MAC/S=0.48G ">MSTCN</a>
+		 <a href="#" class="m_model" title="GCRN_demo" data-title="Param=9.77M, MAC/S=2.47G ">GCRN</a>
+		 <a href="#" class="m_model" title="GaGNet_demo" data-title="Param=5.94M, MAC/S=1.63G ">GaGNet</a>
+		 <a href="#" class="m_model" title="Conv-TasNet_demo" data-title="Param=5.00M, MAC/S=5.23G ">Conv-TasNet</a>
+		 <a href="#" class="m_model" title="DCCRN_demo" data-title="Param=3.67M, MAC/S=11.13G ">DCCRN</a>
+		 <a href="#" class="m_model" title="Lite-RTSE_demo" data-title="Param=1.56M, MAC/S=0.55G ">Lite-RTSE</a>
+		 
+		 
+		 <div class="m_info" >Paper Title: LITE-RTSE: EXPLORING A COST-EFFECTIVE LITE DNN MODEL FOR REAL-TIME SPEECH ENHANCEMENT IN RTC SCENARIOS<br>
+Abstract:<br>
+The noise reduction performance of DNN-based monaural speech enhancement (SE) methods has been significantly improved in recent years, while the complexity of the model has also been increased several times. Therefore, it is high desirable to explore more ‘cost-effective’ speech enhancement methods for a wider range of computing platforms. In this paper, we investigate low-cost model design strategies and propose a lite real-time speech enhancement (Lite-RTSE) model. This real-time SE model with low parameters and computations is designed by using the low-dimensional long shortterm memory (LSTM) units and a novel multi-order convolution block. A two-stage complex spectrum reconstruction scheme of ‘masking + residual’ contributes to better quality and intelligibility of enhanced speech. Experimental results show that compared with some well-known SE models, the Lite-RTSE model can achieve very competitive speech denoising performance with only 1.56 M parameters and 0.55 G multiply-accumulate operations per second (MAC/S).
+</div>
+<div class="m_info_img" ><img src="img/lc.jpg"></div>
+	</div>
+<div class="m_textinfo">Param=-, MAC/S=- </div>
+    <!--音乐播放器-->
+    <div class="music">
+        <div class="m_img">
+            <img src="img/1.jpg"width="90" alt="">
+        </div>
+        <div class="m_text">sample1 - noisy</div>
+        <div class="m_btn">
+            <a href="#" class="m_prev" title="上一首"></a>
+            <a href="#" class="m_play" title="播放"></a>
+            <a href="#" class="m_next" title="下一首"></a>
+        </div>
+        <div class="m_close"></div>
+		<div id="paly_d"></div>
+        <audio id="audio"src="ListeningDemos/sample1/noisy_demo_1.wav" class="m_mp3" controls></audio>
+    </div>
+    </div
+    <!--音乐播放器-->
+    
+    <!-- 引入jQuery核心文件-->
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <!--    引入外部js文件-->
+    <script type="text/javascript" src="js/music.js"></script>
+</body>
+</html>
