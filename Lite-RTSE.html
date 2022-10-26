@@ -50,6 +50,48 @@ Abstract:<br>
 The noise reduction performance of DNN-based monaural speech enhancement (SE) methods has been significantly improved in recent years, while the complexity of the model has also been increased several times. Therefore, it is high desirable to explore more ‘cost-effective’ speech enhancement methods for a wider range of computing platforms. In this paper, we investigate low-cost model design strategies and propose a lite real-time speech enhancement (Lite-RTSE) model. This real-time SE model with low parameters and computations is designed by using the low-dimensional long shortterm memory (LSTM) units and a novel multi-order convolution block. A two-stage complex spectrum reconstruction scheme of ‘masking + residual’ contributes to better quality and intelligibility of enhanced speech. Experimental results show that compared with some well-known SE models, the Lite-RTSE model can achieve very competitive speech denoising performance with only 1.56 M parameters and 0.55 G multiply-accumulate operations per second (MAC/S).
 </div>
 <div class="m_info_img" ><img src="img/lc.jpg"></div>
+<div class="model_info">
+		 <div class="m_info" >
+		Each sample has 8 audios. The first one comes from the orignial noisy recording, while the rest are built from 7 different models. <br><br>
+		 
+Reference on comparable models<br><br>
+
+CRN<br>
+Ke Tan and DeLiang Wang, “A convolutional recurrent neural
+network for real-time speech enhancement.,” in Proceedings
+of INTERSPEECH, 2018, pp. 3229–323<br><br>
+
+MSTCN<br>
+Lu Zhang and Mingjiang Wang, “Multi-Scale TCN: Exploring
+better temporal DNN model for causal speech enhancement.,”
+in Proceedings of INTERSPEECH, 2020, pp. 2672–2676<br><br>
+
+GCRN<br>
+Ke Tan and DeLiang Wang, “Learning complex spectral map-
+ping with gated convolutional recurrent networks for monau-
+ral speech enhancement,” IEEE/ACM Transactions on Audio,
+Speech, and Language Processing, vol. 28, pp. 380–390, 2<br><br>
+
+GaGNet<br>
+Andong Li, Chengshi Zheng, Lu Zhang, and Xiaodong Li,
+“Glance and Gaze: A collaborative learning framework for
+single-channel speech enhancement,” Applied Acoustics, vol.
+187, pp. 108499, 202<br><br>
+
+Conv-TasNet<br>
+Yuichiro Koyama, Tyler Vuong, Stefan Uhlich, and Bhiksha
+Raj, “Exploring the best loss function for DNN-based low-
+latency speech enhancement with temporal convolutional net-
+works,” arXiv: 2005.11611, 2020<br><br>
+
+DCCRN<br>
+Yanxin Hu, Yun Liu, Shubo Lv, Mengtao Xing, Shimin Zhang,
+Yihui Fu, Jian Wu, Bihong Zhang, and Lei Xie, “DCCRN:
+Deep complex convolution recurrent network for phase-aware
+speech enhancement,” in Proceedings of INTERSPEECH,
+2020, pp. 2472–2476<br>
+		 </div>
+		 </div>
 	</div>
 <div class="m_textinfo">Param=-, MAC/S=- </div>
     <!--音乐播放器-->
