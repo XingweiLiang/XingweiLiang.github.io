@@ -1,0 +1,294 @@
+/* 采用utf-8编码解析文件*/
+
+@charset "UTF-8";
+
+body{
+    background: url("../img/bg_m.gif") repeat;
+    background-size: cover;
+}
+.m_body {
+    width: 960px;
+    margin: 0 auto;
+}
+
+/*标签图标只用一张，加快访问速度*/
+
+/*------------横幅 开始-----------------*/
+
+/*设置横幅宽高背景*/
+.banner{
+    width: 960px;/*宽*/
+
+    position: relative;/*子元素相对于父元素定位 让ul li相对于横幅背景移动 避免超出*/
+	margin: 0 auto;
+    top: 50px;	
+	border-radius: 10px;
+}
+
+
+/*设置横幅的li的样式*/
+.banner ul li{
+    list-style: none;/*取消列表默认样式，把无序·去掉*/
+    display: inline-block;/*行内块状元素，类似导航栏的效果*/
+	color: white;
+	display: inline-grid;
+	text-align: center;
+	margin-right: 20px;
+}
+/*操作图片*/
+.banner ul li img{
+    border-radius: 10px;/*把图片边角变圆*/
+    cursor: pointer;/*鼠标变手势*/
+	margin-bottom: 20px;
+	box-shadow: 10px 15px 15px 1px black;
+  width: 128px;
+  height: 90px;
+  position: relative;
+  
+  
+
+
+
+  
+}
+/*使用类选择器，改变图片的位置*/
+
+/* 图片旋转的动画 */
+ @keyframes img_rotate {
+	 0% { transform: translateY(0px); }
+50% { transform: translateY(-10px); }
+100% { transform: translateY(0px); }
+
+	/*
+	 0% {
+left: 0;
+}
+25% {
+top: -15px;
+}
+50% {
+top: 0;
+}
+75% {
+top: 15px;
+}
+100% {
+top: 0;
+}*/
+  /*   from {
+         transform: rotate(0deg);
+     } to {
+         transform: rotate(360deg);
+     }*/
+ }
+ 
+ 
+ /* 动画执行的时间和次数 */
+.img_rotate{
+    animation: img_rotate 1s infinite; 
+}
+ /*------------横幅 结束-----------------*/
+
+/*-------------播放器--------------*/
+/*修改播放器的样式*/
+.music{
+    width: 640px;
+    height: 110px;
+    background: black;
+    position: fixed;
+	left: 0; 
+    bottom: 10px;
+    opacity: 0.8;
+    box-shadow: 10px 15px 15px 1px black;
+	border-radius: 10px;
+	    z-index: 999;
+}
+#playimg {
+    border-radius: 10px;
+    position: relative;
+    width: 90px;
+    height: 75px;
+}
+.m_textinfo{	
+	width: 640px;
+    height: 40px;
+    background: black;
+    position: fixed;
+    left: 0;
+    bottom: 135px;
+    opacity: 0.8;
+    box-shadow: 10px 15px 15px 1px black;
+    border-radius: 10px;
+    color: white;
+    line-height: 48px;
+    text-indent: 1em;
+    font-size: 20px;	
+	z-index: 999;
+}
+.model{
+   width: 960px;
+    height: 100px;
+    opacity: 0.8;
+    border-radius: 10px;
+	margin: 0 auto;
+    margin-top:80px;
+}
+.model_info{
+   width: 960px;
+    height: 100px;
+    opacity: 0.8;
+    border-radius: 10px;
+	margin: 0 auto;
+    margin-top:20px;
+	display: inline-table;
+}
+
+a.m_model, #downdemosa {
+color: white;
+    text-decoration: none;
+    height: 35px;
+    line-height: 35px;
+    padding: 0 25px;
+    margin: 0px 10px;
+    float: left;
+    border: 1px solid;
+    border-radius: 5px;
+	margin-left: 75px;
+	box-shadow: 10px 15px 15px 1px black;
+}
+a.m_model.model_hover {
+    color: white;
+    background: rgba(202, 26, 27, 1);
+	border: 1px solid rgba(202, 26, 27, 1);
+}
+.m_info {
+    float: left;
+    width: 94%;
+    line-height: 28px;
+    margin-top: 20px;
+	text-align: justify;
+	background: black;
+	box-shadow: 10px 15px 15px 1px black;
+	opacity: 0.8;
+	color: white;
+	border-radius: 5px;
+    padding: 3%;
+}
+audio.m_mp3 {
+    margin-left: 20px;
+}
+.m_info_img img{
+	width: 960px;
+    margin-top: 40px;
+    border-radius: 5px;
+	box-shadow: 10px 15px 15px 1px black;
+
+}
+#paly_d {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 55px;
+    left: 132px;
+    z-index: 1;
+    z-index: 999em;
+    cursor: pointer;
+	outline:none;
+}
+
+/*优化播放器样式*/
+/*调整音乐和图片的位置*/
+.music .m_img {
+	margin-top: 35px;
+    margin-left: 10px;
+    float: left;
+}
+/*修改音乐盒文本显示*/
+.music .m_text{
+    float: left;/*左浮动*/
+    color: white;/*字体颜色*/
+    font-size: 20px;/*字体大小*/
+    font-weight: bold;/*字体加粗*/
+    height: 45px;
+    line-height: 45px;
+    margin-left: 40px;
+	width: 70%;
+}
+/*使得所有a标签一起移动*/
+.music .m_btn {
+    float: left;
+    /*使用绝对定位，防止歌曲名称过长挤出按钮，div样式发生改变*/
+    position: absolute;
+    left: 420px;
+}
+/*修改a标签，设置宽高及背景图片*/
+.music .m_btn a{
+    float: left;
+    width: 35px;
+    height: 35px;
+    background: url("../img/player_bg.png");
+    margin-top: 50px;
+    margin-left: 20px;
+}
+/*改变上一首的图片*/
+.music .m_btn .m_prev{
+    background-position: -68px 0;
+}
+.music .m_btn .m_pre:hover{
+    background-position: -68px -32px;
+}
+/*改变暂停的图片*/
+/*hover用于选择鼠标指针浮动在上面的元素，改变播放器鼠标放上的状态*/
+.music .m_btn .m_play{
+    background-position: -104px -5px;
+}
+.music .m_btn .m_play:hover{
+    background-position: -104px -47px;
+}
+/*改变下一首的图片*/
+.music .m_btn .m_next{
+    background-position: -145px 0;
+}
+.music .m_btn .m_next:hover{
+    background-position: -145px -32px;
+}
+/*设置最右边的关闭样式*/
+.music .m_close{
+    float: right;/*右浮动*/
+    background: url("../img/player_bg.png");/*背景图片*/
+    width: 23px;/*宽*/
+    height: 120px;/*高*/
+    margin-top: 0;
+    cursor: pointer;/*鼠标变手势*/
+	border-radius: 0px 10px 10px 0px;
+}
+/*编写js代码时，更换播放按钮为暂停时编写的代码*/
+.music .m_btn .m_pause{
+    background-position: -292px -93px;
+}
+.music .m_btn .m_pause:hover{
+    background-position: -334px -93px;
+}
+/*编写js代码时，隐藏或者显示播放器时编写的代码*/
+.music .m_open{
+    background-position: -45px 0px;
+}
+/*-------------播放器--------------*/
+
+
+.downdemos {
+  float: right;
+  width: 100%;
+  text-align: right;
+  margin-top: 12px;
+}
+#downdemosa{
+
+float:right;
+cursor: pointer;
+background-color: red;
+border-color: red;
+}
+#downdemosa:hover{
+	box-shadow: 0px 9px 23px 0px red;
+}

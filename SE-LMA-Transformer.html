@@ -1,9 +1,139 @@
 <!DOCTYPE html>
-<html>
-    <head>
-            <title>Xingwei</title>
-    </head>
-    <body>
-        <h1>comming soon for paper SE-LMA-Transformer.</h1>
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<header name = "Access-Control-Allow-Origin" value = "*" /> 
+    <title>Music</title>
+    <!--    引入外部css文件-->
+    <link href="favicon.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="SE-LMA-Transformer/css/music.css">
+
+</head>
+
+<style>
+      #file {
+          position: fixed;
+          top: 10px;
+          left: 10px;
+          z-index: 100;
+      }
+      
+      #canvas {
+          position: fixed;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+		  opacity: 0.5;
+      }
+</style>
+<body>
+<div class="m_body">
+
+<div id="content">
+
+</div>
+
+    <!--横幅-->
+	<div class="bannerbg">
+	<div class="downdemos">
+ <a id="downdemosa" href="SE-LMA-Transformer/ListeningDemos.zip"  title="download Listening Demos"  >download Listening Demos</a></div>
+    <div class="banner">
+	   <!-- <canvas id="canvas"></canvas>-->
+	
+        <ul>
+            <li id="m1" class="m1" datasrc="SE-LMA-Transformer/ListeningDemos/p232_343/noisy_demo_1_p257_135.wav" title="p232_343">
+                <img src="SE-LMA-Transformer/img/1.jpg" alt=""width="65">demo1
+            </li>
+            <li class="m2" datasrc="SE-LMA-Transformer/ListeningDemos/p232_409/noisy_demo_2_p232_409.wav" title="p232_409">
+                <img src="SE-LMA-Transformer/img/2.jpg" alt=""width="90">demo2
+            </li>
+            <li class="m3" datasrc="SE-LMA-Transformer/ListeningDemos/p257_013/noisy_demo_3_p257_013.wav" title="p257_013">
+                <img src="SE-LMA-Transformer/img/3.jpg" alt=""width="119">demo3
+            </li>
+            <li class="m4" datasrc="SE-LMA-Transformer/ListeningDemos/p257_069/noisy_demo_4_p257_069.wav" title="p257_069">
+                <img src="SE-LMA-Transformer/img/4.jpg" alt=""width="90">demo4
+            </li>
+            <li class="m5" datasrc="SE-LMA-Transformer/ListeningDemos/p257_130/noisy_demo_5_p257_130.wav" title="p257_130">
+                <img src="SE-LMA-Transformer/img/5.jpg" alt=""width="65">demo5
+            </li>
+			<li class="m6" datasrc="SE-LMA-Transformer/ListeningDemos/p257_135/noisy_demo_6_p257_135.wav" title="p257_135">
+                <img src="SE-LMA-Transformer/img/6.jpg" alt=""width="65">demo6
+            </li>
+        </ul>
+    </div>
+    </div>
+	<!--横幅-->
+		<div class="model">
+		 <a href="#" class="m_model model_hover" title="noisy_demo"  data-title="Param=-, MAC/S=- ">noisy</a>
+		 <a href="#" class="m_model" title="GaGNet_demo" data-title="Param=5.94M, MAC/S=1.63G ">GaGNet</a>
+		 <a href="#" class="m_model" title="DCCRN_demo" data-title="Param=3.67M, MAC/S=11.13G ">DCCRN</a>
+		 <a href="#" class="m_model" title="PHASEN_demo" data-title="Param=1.56M, MAC/S=0.55G ">PHASEN</a>
+		 		 <a href="#" class="m_model" title="HAB_demo" data-title="Param=17.58M, MAC/S=2.54G ">HAB</a>
+		 
+		 
+		 <div class="m_info" >SE-LMA-Transformer<br>
+
+Abstract
+Time-frequency analysis in single-channel speech enhancement has received considerable attention. While Transformer-based architectures are gaining traction, their computational burden can be substantial, especially when dealing with longer speech samples. To address this, our research introduces the lightweight multi-axial Transformer (LMA-Transformer) optimized for low computational overhead while efficiently extracting features along both temporal and frequency axes. Central to our approach is the Temporal/Frequency Multi-DConv head self-attention module (T/F-MDHSA), which not only reduces computational costs but also improves the Transformer's capability to utilize local features effectively. Moreover, we introduce the frequency prompt block, designed to dynamically guide the recovery of frequency features in speech signals that have experienced varying levels of degradation. Compared to state-of-the-art models, our model has competitive performance with 3.40 PESQ, 95.8% STOI, and 10.15 SSNR on the VoiceBank + Demand dataset. <br>
+<br>
+
+Key References:
+Y.Hu, Y. Liu, S. Lv, M. Xing, S. Zhang, Y. Fu, J. Wu, B. Zhang, and L. Xie, “DCCRN: Deep complex convolution recurrent network for phase-aware speech enhancement,” in INTERSPEECH, 2020, pp. 2472–2476.<br>
+<br>
+
+D. Yin, C. Luo, Z. Xiong, and W. Zeng, “Phasen: A phaseand-harmonics-aware speech enhancement network,” in AAAI, 2020, p. 9458–9465.<br>
+<br>
+
+A. Li, C. Zheng, L. Zhang, and X. Li, “Glance and gaze: A collaborative learning framework for single-channel speech enhancement,” Applied Acoustics, vol. 187, pp.
+108499, 2022.<br>
+<br>
+
+S. Fu, C. Yu, T. Hsieh, Plantinga P., M. Ravanelli, X. Lu, and Y. Tsao, “MetricGAN+: An Improved Version of MetricGAN for Speech Enhancement,” in Interspeech,
+2021, pp. 201–205.<br>
+<br>
+
+H. Shi, M. Mimura, L. Wang, J. Dang, and T. Kawahara, “Time-domain speech enhancement assisted by multiresolution frequency encoder and decoder,” in ICASSP,
+2023, pp. 1–5
+</div>
+
+<div class="model_info">
+
+		 </div>
+	</div> <!--
+<div class="m_textinfo">Param=-, MAC/S=- </div>
+    <!--音乐播放器-->
+    <div class="music">
+        <div  class="m_img">
+            <img id="playimg" src="SE-LMA-Transformer/img/1.jpg"width="90" alt="">
+        </div>
+        <div class="m_text">p232_343 - noisy</div>
+        <div class="m_btn">
+            <a href="#" class="m_prev" title="上一首"></a>
+            <a href="#" class="m_play" title="播放"></a>
+            <a href="#" class="m_next" title="下一首"></a>
+        </div>
+        <div class="m_close"></div>
+		<div id="paly_d"></div>
+        <audio id="audio"src="SE-LMA-Transformer/ListeningDemos/sample1/noisy_demo_1_p232_343.wav" class="m_mp3" controls ></audio>
+    </div>
+    </div
+    <!--音乐播放器-->
+    
+    <!-- 引入jQuery核心文件-->
+    <script type="text/javascript" src="SE-LMA-Transformer/js/jquery-3.3.1.min.js"></script>
+    <!--    引入外部js文件-->
+    <script type="text/javascript" src="SE-LMA-Transformer/js/music.js"></script>
+	
+</body>
+<script type="text/javascript">
+
+window.onload = function () {
+	//$("#m1").click();
+	audio.pause();
+	 audio.addEventListener('ended', function () {
+		play.click();
+    }, false);
+};
+</script>
 </html>
