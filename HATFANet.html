@@ -10,15 +10,15 @@
 
 <div class="audio-main">
 <div class="downdemos">
- <a id="downdemosa" href="HATFANet/ListeningDemos.zip" title="download Listening Demos"">download Listening Demos</a>
+ <a id="downdemosa" href="HATFANet/ListeningDemos.zip" title="download test set">download test set</a>
  </div>
  <div class="demomodel">
-		 <a href="#" class="dm_model dmodel_hover" title="1" >demo1</a>
-		 <a href="#" class="dm_model" title="2" >demo2</a>
-		 <a href="#" class="dm_model" title="3" >demo3</a>
-		 <a href="#" class="dm_model" title="4" >demo4</a>
-		 <a href="#" class="dm_model" title="5" >demo5</a>
-		 <a href="#" class="dm_model" title="6" >demo6</a>
+		 <a href="#" class="dm_model dmodel_hover" title="1" data-title="p232_343" >demo1</a>
+		 <a href="#" class="dm_model" title="2" data-title="p232_409" >demo2</a>
+		 <a href="#" class="dm_model" title="3" data-title="p257_013" >demo3</a>
+		 <a href="#" class="dm_model" title="4" data-title="p257_069" >demo4</a>
+		 <a href="#" class="dm_model" title="5" data-title="p257_130" >demo5</a>
+		 <a href="#" class="dm_model" title="6" data-title="p257_135" >demo6</a>
 </div>
 <div class="audio-main-left">
 <div class="audio-main-left-top">
@@ -40,11 +40,11 @@
 </div>
 <div class="audio-main-right">
 <div class="model">
-		 <a href="#" class="m_model model_hover" title="noisy" data-title="Param=-, MAC/S=- ">noisy</a>
-		 <a href="#" class="m_model" title="GaGNet" data-title="Param=5.94M, MAC/S=1.63G ">GaGNet</a>
-		 <a href="#" class="m_model" title="DCCRN" data-title="Param=3.67M, MAC/S=11.13G ">DCCRN</a>
-		 <a href="#" class="m_model" title="PHASEN" data-title="Param=1.56M, MAC/S=0.55G ">PHASEN</a>
-		 <a href="#" class="m_model" title="HAB" data-title="Param=17.58M, MAC/S=2.54G ">HAB</a>
+		 <a href="#" class="m_model model_hover" title="noisy" data-no="1" data-title="Param=-, MAC/S=- ">noisy</a>
+		 <a href="#" class="m_model" title="GaGNet" data-no="2" data-title="Param=5.94M, MAC/S=1.63G ">GaGNet</a>
+		 <a href="#" class="m_model" title="DCCRN"data-no="3" data-title="Param=3.67M, MAC/S=11.13G ">DCCRN</a>
+		 <a href="#" class="m_model" title="PHASEN"data-no="4" data-title="Param=1.56M, MAC/S=0.55G ">PHASEN</a>
+		 <a href="#" class="m_model" title="HAB"data-no="5" data-title="Param=17.58M, MAC/S=2.54G ">HAB</a>
 </div>
 </div>
 
@@ -129,7 +129,6 @@ ICASSP, 2022, pp. 7847–7851
 
 			song : [
 				{
-
 					title : 'demo1',
 					src : 'HATFANet/ListeningDemos/sample1/noisy_demo_1_p232_343.wav',
 					cover : 'HATFANet/images/1.jpg',
@@ -137,38 +136,31 @@ ICASSP, 2022, pp. 7847–7851
 				},
 				{
 
-					title : 'demo2',
-					src : 'HATFANet/ListeningDemos/sample2/noisy_demo_2_p232_409.wav',
-					cover : 'HATFANet/images/2.jpg',
-					types:'noisy'
+					title : 'demo1',
+					src : 'HATFANet/ListeningDemos/sample1/GaGNet_demo_1_p232_343.wav',
+					cover : 'HATFANet/images/1.jpg',
+					types:'GaGNet'
 				},
 				{
 
-					title : 'demo3',
-					src : 'HATFANet/ListeningDemos/sample3/noisy_demo_3_p257_013.wav',
-					cover : 'HATFANet/images/3.jpg',
-					types:'noisy'
+					title : 'demo1',
+					src : 'HATFANet/ListeningDemos/sample1/DCCRN_demo_1_p232_343.wav',
+					cover : 'HATFANet/images/1.jpg',
+					types:'DCCRN'
 				},
 				{
 
-					title : 'demo4',
-					src : 'HATFANet/ListeningDemos/sample4/noisy_demo_4_p257_069.wav',
-					cover : 'HATFANet/images/4.jpg',
-					types:'noisy'
+					title : 'demo1',
+					src : 'HATFANet/ListeningDemos/sample1/PHASEN_demo_1_p232_343.wav',
+					cover : 'HATFANet/images/1.jpg',
+					types:'PHASEN'
 				},
 				{
 
-					title : 'demo5',
-					src : 'HATFANet/ListeningDemos/sample5/noisy_demo_5_p257_130.wav',
-					cover : 'HATFANet/images/5.jpg',
-					types:'noisy'
-				},
-				{
-
-					title : 'demo6',
-					src : 'HATFANet/ListeningDemos/sample6/noisy_demo_6_p257_135.wav',
-					cover : 'HATFANet/images/6.jpg',
-					types:'noisy'
+					title : 'demo1',
+					src : 'HATFANet/ListeningDemos/sample1/HAB_demo_1_p232_343.wav',
+					cover : 'HATFANet/images/1.jpg',
+					types:'HAB'
 				}
 			],
 			error : function(meg){
@@ -192,13 +184,13 @@ var model = $(".m_model");//获取播放器1下一首a元素按钮
 model.click(function(){
 	$(".model").children().removeClass("model_hover");
 	$(this).addClass("m_model model_hover");
+	songSelect=parseInt($(this).attr("data-no"))-1;
 	audioFn.loadFile(1);
 });
 
 $(".dm_model").click(function(){
 	$(".demomodel").children().removeClass("dmodel_hover");
 	$(this).addClass("dm_model dmodel_hover");
-	songSelect=parseInt($(this).attr("title"))-1;
 	audioFn.loadFile(1);
 });
 
