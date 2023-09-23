@@ -37,27 +37,29 @@
     <!--横幅-->
 	<div class="bannerbg">
 	<div class="downdemos">
- <a id="downdemosa" href="SE-LMA-Transformer/ListeningDemos.zip"  title="download Listening Demos"  >download Listening Demos</a></div>
+ <a id="downdemosa"  target="_blank" href="https://pan.baidu.com/s/1yZfyG9s2xNSHD3sqrqCeWQ?pwd=ljrp"  title="download test set"  >download test set</a></div>
     <div class="banner">
-	   <!-- <canvas id="canvas"></canvas>-->
+	   <!-- <canvas id="canvas"></canvas>
+	   分别为 Noisy, GaGNet, DCCRN, MetricGAN+, DB-AIAT, SE-LMA-Transformer
+	  -->
 	
         <ul>
-            <li id="m1" class="m1" datasrc="SE-LMA-Transformer/ListeningDemos/p232_343/noisy_demo_1_p257_135.wav" title="p232_343">
+            <li id="m1" class="m1" datasrc="ListeningDemos/p232_343/noisy_demo_1_p257_135.wav" title="p232_005">
                 <img src="SE-LMA-Transformer/img/1.jpg" alt=""width="65">demo1
             </li>
-            <li class="m2" datasrc="SE-LMA-Transformer/ListeningDemos/p232_409/noisy_demo_2_p232_409.wav" title="p232_409">
+            <li class="m2" datasrc="ListeningDemos/p232_409/noisy_demo_2_p232_409.wav" title="p232_095">
                 <img src="SE-LMA-Transformer/img/2.jpg" alt=""width="90">demo2
             </li>
-            <li class="m3" datasrc="SE-LMA-Transformer/ListeningDemos/p257_013/noisy_demo_3_p257_013.wav" title="p257_013">
+            <li class="m3" datasrc="ListeningDemos/p257_013/noisy_demo_3_p257_013.wav" title="p232_113">
                 <img src="SE-LMA-Transformer/img/3.jpg" alt=""width="119">demo3
             </li>
-            <li class="m4" datasrc="SE-LMA-Transformer/ListeningDemos/p257_069/noisy_demo_4_p257_069.wav" title="p257_069">
+            <li class="m4" datasrc="ListeningDemos/p257_069/noisy_demo_4_p257_069.wav" title="p232_242">
                 <img src="SE-LMA-Transformer/img/4.jpg" alt=""width="90">demo4
             </li>
-            <li class="m5" datasrc="SE-LMA-Transformer/ListeningDemos/p257_130/noisy_demo_5_p257_130.wav" title="p257_130">
+            <li class="m5" datasrc="ListeningDemos/p257_130/noisy_demo_5_p257_130.wav" title="p232_343">
                 <img src="SE-LMA-Transformer/img/5.jpg" alt=""width="65">demo5
             </li>
-			<li class="m6" datasrc="SE-LMA-Transformer/ListeningDemos/p257_135/noisy_demo_6_p257_135.wav" title="p257_135">
+			<li class="m6" datasrc="ListeningDemos/p257_135/noisy_demo_6_p257_135.wav" title="p257_013">
                 <img src="SE-LMA-Transformer/img/6.jpg" alt=""width="65">demo6
             </li>
         </ul>
@@ -65,11 +67,13 @@
     </div>
 	<!--横幅-->
 		<div class="model">
-		 <a href="#" class="m_model model_hover" title="noisy_demo"  data-title="Param=-, MAC/S=- ">noisy</a>
-		 <a href="#" class="m_model" title="GaGNet_demo" data-title="Param=5.94M, MAC/S=1.63G ">GaGNet</a>
-		 <a href="#" class="m_model" title="DCCRN_demo" data-title="Param=3.67M, MAC/S=11.13G ">DCCRN</a>
-		 <a href="#" class="m_model" title="PHASEN_demo" data-title="Param=1.56M, MAC/S=0.55G ">PHASEN</a>
-		 		 <a href="#" class="m_model" title="HAB_demo" data-title="Param=17.58M, MAC/S=2.54G ">HAB</a>
+		 <a href="#" class="m_model model_hover" title="noisy"  data-title="">Noisy</a>
+		<a href="#" class="m_model" title="dccrn" data-title="">DCCRN</a>
+		 <a href="#" class="m_model" title="gagnet" data-title="">GaGNet</a>
+
+		 <a href="#" class="m_model" title="metricgan" data-title="">MetricGAN+</a>
+		 <!--<a href="#" class="m_model" title="db-aiat" data-title="">DB-AIAT</a>-->
+		  <a href="#" class="m_model" title="se-lmr-trans" data-title="">SE-LMA-Transformer</a>
 		 
 		 
 		 <div class="m_info" >SE-LMA-Transformer<br>
@@ -107,7 +111,7 @@ H. Shi, M. Mimura, L. Wang, J. Dang, and T. Kawahara, “Time-domain speech enha
         <div  class="m_img">
             <img id="playimg" src="SE-LMA-Transformer/img/1.jpg"width="90" alt="">
         </div>
-        <div class="m_text">p232_343 - noisy</div>
+        <div class="m_text">p232_005 - Noisy</div>
         <div class="m_btn">
             <a href="#" class="m_prev" title="上一首"></a>
             <a href="#" class="m_play" title="播放"></a>
@@ -115,7 +119,7 @@ H. Shi, M. Mimura, L. Wang, J. Dang, and T. Kawahara, “Time-domain speech enha
         </div>
         <div class="m_close"></div>
 		<div id="paly_d"></div>
-        <audio id="audio"src="SE-LMA-Transformer/ListeningDemos/sample1/noisy_demo_1_p232_343.wav" class="m_mp3" controls ></audio>
+        <audio id="audio"src="SE-LMA-Transformer/SE-LMA-Transformer_ListeningDemos/Demo1/noisy-p232_005.wav" class="m_mp3" controls ></audio>
     </div>
     </div
     <!--音乐播放器-->
