@@ -65,15 +65,15 @@ function show(){
 function change_bg(idx){
 	//no-repeat
     $("body").css({
-        "background": "url(SE-LMA-Transformer/img/" + idx + "_bg.jpg) repeat",
+        "background": "url(img/" + idx + "_bg.jpg) repeat",
         "background-size": "cover"
     });
 }
 //更换播放器图片、文本
 function change_img_text(idx){
-    img.attr("src","SE-LMA-Transformer/img/" + idx + ".jpg");//更换播放器图片
+    img.attr("src","img/" + idx + ".jpg");//更换播放器图片
 	//var title=li.eq(index).attr("title")+' - '+$(".model_hover")[0].title.replace("_demo","");
-	var title="demo"+idx+' - '+$(".model_hover")[0].title.replace("_demo","");
+	var title="demo"+idx+' - '+$(".model_hover")[0].innerText.replace("_demo","");
     text.html(title);//获取li的title属性然后替换文本
 }
 //更换播放按钮及title为暂停
@@ -99,80 +99,13 @@ function play_mp3(){
 
 	var srcindex=index+1;
 	filename=	$(".m"+srcindex)[0].title;
-	
-	var datasrrc="SE-LMA-Transformer/ListeningDemos/sample"+srcindex+"/"+$(".model_hover")[0].title+"_"+srcindex+"_"+filename+".wav";
+	debugger;
+	var datasrrc="SE-LMA-Transformer_ListeningDemos/Demo"+srcindex+"/"+$(".model_hover")[0].title+"-"+filename+".wav";
 	
 	li.eq(index).attr("datasrc",datasrrc)
     //获取我们选中的li的datasrc属性
     mp3.attr("src",li.eq(index).attr("datasrc"));
-	/*
-		 //part1: 画布
-     var canvas = document.getElementById("canvas");
-     var context = canvas.getContext("2d");
-     canvas.width = window.innerWidth;
-     canvas.height = window.innerHeight;
-     var WIDTH = canvas.width;
-     var HEIGHT = canvas.height;
-
-	audio=mp3.get(0);
-	//audio.src=datasrrc;
-//audio.muted=true;
-     //part3: 分析器
-     var AudCtx = new AudioContext();//音频内容
-     var src = AudCtx.createMediaElementSource(audio);
-     var analyser = AudCtx.createAnalyser();
-
-     src.connect(analyser);
-     analyser.connect(AudCtx.destination);
-     analyser.fftSize = 128;//快速傅里叶变换, 必须为2的N次方
-
-     var bufferLength = analyser.frequencyBinCount;// = fftSize * 0.5
-
-     //part4: 变量
-     var barWidth = (WIDTH / bufferLength) - 1;//间隔1px
-     var barHeight;
-
-     var dataArray = new Uint8Array(bufferLength);//8位无符号定长数组
-
-     //part5: 动态监听
-     function renderFrame() {
-		if(flag){}
-         requestAnimationFrame(renderFrame);//方法renderFrame托管到定时器，无限循环调度，频率<16.6ms/次
-
-         context.fillStyle = "#000";//黑色背景
-         context.fillRect(0, 0, WIDTH, HEIGHT);//画布拓展全屏,动态调整
-
-         analyser.getByteFrequencyData(dataArray);//获取当前时刻的音频数据
-
-         //part6: 绘画声压条
-         var x = 0;
-         for (var i = 1; i < bufferLength; i++) {
-             var data = dataArray[i];//int,0~255
-
-             var percentV = data / 255;//纵向比例
-             var percentH = i / bufferLength;//横向比例
-
-             barHeight = HEIGHT * percentV;
-
-             //gbk,0~255
-             var r = 255 * percentV;//值越大越红
-             var g = 255 * percentH;//越靠右越绿
-             var b = 50;
-
-             context.fillStyle = "rgb(" + r + "," + g + "," + b + ")";
-             context.fillRect(x+300, HEIGHT - barHeight, barWidth+10, barHeight);
-
-             x += barWidth + 40;//间隔1px
-         }
-     }
-
-     renderFrame();
-	 audio.play();
-	// audio.muted=true;
-	// mp3.get(0).play();//播放歌曲
-	 //mp3.get(0).muted=true;*/
 	 audio=mp3.get(0);	 
-
 	audio.play();
     //修改歌曲播放的标记 true播放 false暂停
     flag = true;
