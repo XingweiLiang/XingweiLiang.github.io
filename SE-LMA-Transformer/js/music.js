@@ -65,13 +65,13 @@ function show(){
 function change_bg(idx){
 	//no-repeat
     $("body").css({
-        "background": "url(img/" + idx + "_bg.jpg) repeat",
+        "background": "url(SE-LMA-Transformer/img/" + idx + "_bg.jpg) repeat",
         "background-size": "cover"
     });
 }
 //更换播放器图片、文本
 function change_img_text(idx){
-    img.attr("src","img/" + idx + ".jpg");//更换播放器图片
+    img.attr("src","SE-LMA-Transformer/img/" + idx + ".jpg");//更换播放器图片
 	//var title=li.eq(index).attr("title")+' - '+$(".model_hover")[0].title.replace("_demo","");
 	var title="demo"+idx+' - '+$(".model_hover")[0].innerText.replace("_demo","");
     text.html(title);//获取li的title属性然后替换文本
@@ -100,7 +100,7 @@ function play_mp3(){
 	var srcindex=index+1;
 	filename=	$(".m"+srcindex)[0].title;
 	debugger;
-	var datasrrc="SE-LMA-Transformer_ListeningDemos/Demo"+srcindex+"/"+$(".model_hover")[0].title+"-"+filename+".wav";
+	var datasrrc="SE-LMA-Transformer/SE-LMA-Transformer_ListeningDemos/Demo"+srcindex+"/"+$(".model_hover")[0].title+"-"+filename+".wav";
 	
 	li.eq(index).attr("datasrc",datasrrc)
     //获取我们选中的li的datasrc属性
