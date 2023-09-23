@@ -34,6 +34,13 @@ var audio = new Audio();
 li.click(function(){
     //console.log($(this).index());
     index = $(this).index();//获取当前点击的li索引
+	
+	
+	
+	$(".model").children().removeClass("model_hover");
+	$(".model").children().first().addClass("m_model model_hover");
+	var datatitle=$(".model_hover")[0].dataset.title;
+	
     //播放歌曲
     show();
 });
@@ -99,7 +106,7 @@ function play_mp3(){
 
 	var srcindex=index+1;
 	filename=	$(".m"+srcindex)[0].title;
-	debugger;
+	
 	var datasrrc="SE-LMA-Transformer/SE-LMA-Transformer_ListeningDemos/Demo"+srcindex+"/"+$(".model_hover")[0].title+"-"+filename+".wav";
 	
 	li.eq(index).attr("datasrc",datasrrc)
@@ -168,6 +175,7 @@ model.click(function(){
 	$(".model").children().removeClass("model_hover");
 	$(this).addClass("m_model model_hover");
 	var datatitle=$(".model_hover")[0].dataset.title;
+	
 	//textinfo.html(datatitle);//获取li的title属性然后替换文本
     show();
 	
