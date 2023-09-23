@@ -2,36 +2,36 @@
 <html>
 <head>
 	<meta charset="utf-8" />
-	<link rel="stylesheet" type="text/css" href="HATFANet/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="HATFANet/css/audio.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/audio.css">
 	<title>音频播放</title>
 </head>
 <body>
 
 <div class="audio-main">
 <div class="downdemos">
- <a id="downdemosa" href="HATFANet/ListeningDemos.zip" title="download test set">download test set</a>
+ <a id="downdemosa"  target="_blank" href="https://pan.baidu.com/s/1yZfyG9s2xNSHD3sqrqCeWQ?pwd=ljrp" title="download test set">download test set</a>
  </div>
  <div class="demomodel">
-		 <a href="#" class="dm_model dmodel_hover" title="1" data-title="p232_343" >demo1</a>
-		 <a href="#" class="dm_model" title="2" data-title="p232_409" >demo2</a>
-		 <a href="#" class="dm_model" title="3" data-title="p257_013" >demo3</a>
-		 <a href="#" class="dm_model" title="4" data-title="p257_069" >demo4</a>
-		 <a href="#" class="dm_model" title="5" data-title="p257_130" >demo5</a>
-		 <a href="#" class="dm_model" title="6" data-title="p257_135" >demo6</a>
+		 <a href="#" class="dm_model dmodel_hover" title="1" >demo1</a>
+		 <a href="#" class="dm_model" title="2" >demo2</a>
+		 <a href="#" class="dm_model" title="3" >demo3</a>
+		 <a href="#" class="dm_model" title="4" >demo4</a>
+		 <a href="#" class="dm_model" title="5" >demo5</a>
+		 <a href="#" class="dm_model" title="6" >demo6</a>
 </div>
 <div class="audio-main-left">
 <div class="audio-main-left-top">
 <div class="music-player__disc">
                 <!-- 唱片图片 -->
                 <div class="music-player__image">
-                    <img id="playerimg" width="100%" src="./HATFANet/images/songs/c.jpg" alt="">
+                    <img id="playerimg" width="100%" src="./images/songs/c.jpg" alt="">
 			
 					<div id="imgplay" action="play" data-on="icon-play" data-off="icon-pause" class="icon-play"></div>
 		
                 </div>
                 <!-- 指针 -->
-                <div class="music-player__pointer"><img width="100%" src="./HATFANet/images/cd_tou.png" alt=""></div>
+                <div class="music-player__pointer"><img width="100%" src="./images/cd_tou.png" alt=""></div>
             </div></div>
 <div class="intro">
 <div class="introtitle">
@@ -40,11 +40,13 @@
 </div>
 <div class="audio-main-right">
 <div class="model">
-		 <a href="#" class="m_model model_hover" title="noisy" data-no="1" data-title="Param=-, MAC/S=- ">noisy</a>
-		 <a href="#" class="m_model" title="GaGNet" data-no="2" data-title="Param=5.94M, MAC/S=1.63G ">GaGNet</a>
-		 <a href="#" class="m_model" title="DCCRN"data-no="3" data-title="Param=3.67M, MAC/S=11.13G ">DCCRN</a>
-		 <a href="#" class="m_model" title="PHASEN"data-no="4" data-title="Param=1.56M, MAC/S=0.55G ">PHASEN</a>
-		 <a href="#" class="m_model" title="HAB"data-no="5" data-title="Param=17.58M, MAC/S=2.54G ">HAB</a>
+<!--Noisy, GaGNet, DCCRN, MetricGAN+, DB-AIAT, HATFANet-->
+		 <a href="#" class="m_model model_hover" title="noisy" data-title="">Noisy</a>
+		 <a href="#" class="m_model" title="DCCRN" data-title="">DCCRN</a>
+		 <a href="#" class="m_model" title="GaGNet" data-title="">GaGNet</a>
+		 <a href="#" class="m_model" title="metricgan" data-title="">MetricGAN+</a>
+		 <a href="#" class="m_model" title="db-aiat" data-title="">DB-AIAT</a>
+		 <a href="#" class="m_model" title="hatfanet" data-title="">HATFANet</a>
 </div>
 </div>
 
@@ -117,8 +119,8 @@ ICASSP, 2022, pp. 7847–7851
 		</div>
 	</div>
 </body>
-    <script src="HATFANet/js/jquery-1.12.0.min.js"></script>
-<script type="text/javascript" src="HATFANet/js/audio.js"></script>
+    <script src="js/jquery-1.12.0.min.js"></script>
+<script type="text/javascript" src="js/audio.js"></script>
 <script type="text/javascript">
 	var setConfig=null;
 	var audioFn =null;
@@ -129,38 +131,46 @@ ICASSP, 2022, pp. 7847–7851
 
 			song : [
 				{
+
 					title : 'demo1',
-					src : 'HATFANet/ListeningDemos/sample1/noisy_demo_1_p232_343.wav',
-					cover : 'HATFANet/images/1.jpg',
+					src : 'HATFANet_ListeningDemos/Demo1/noisy-p257_114.wav',
+					cover : 'images/1.jpg',
 					types:'noisy'
 				},
 				{
 
-					title : 'demo1',
-					src : 'HATFANet/ListeningDemos/sample1/GaGNet_demo_1_p232_343.wav',
-					cover : 'HATFANet/images/1.jpg',
-					types:'GaGNet'
+					title : 'demo2',
+					src : 'HATFANet_ListeningDemos/Demo2/noisy-p257_215.wav',
+					cover : 'images/2.jpg',
+					types:'noisy'
 				},
 				{
 
-					title : 'demo1',
-					src : 'HATFANet/ListeningDemos/sample1/DCCRN_demo_1_p232_343.wav',
-					cover : 'HATFANet/images/1.jpg',
-					types:'DCCRN'
+					title : 'demo3',
+					src : 'HATFANet_ListeningDemos/Demo3/noisy-p257_231.wav',
+					cover : 'images/3.jpg',
+					types:'noisy'
 				},
 				{
 
-					title : 'demo1',
-					src : 'HATFANet/ListeningDemos/sample1/PHASEN_demo_1_p232_343.wav',
-					cover : 'HATFANet/images/1.jpg',
-					types:'PHASEN'
+					title : 'demo4',
+					src : 'HATFANet_ListeningDemos/Demo4/noisy-p257_255.wav',
+					cover : 'images/4.jpg',
+					types:'noisy'
 				},
 				{
 
-					title : 'demo1',
-					src : 'HATFANet/ListeningDemos/sample1/HAB_demo_1_p232_343.wav',
-					cover : 'HATFANet/images/1.jpg',
-					types:'HAB'
+					title : 'demo5',
+					src : 'HATFANet_ListeningDemos/Demo5/noisy-p232_242.wav',
+					cover : 'images/5.jpg',
+					types:'noisy'
+				},
+				{
+
+					title : 'demo6',
+					src : 'HATFANet_ListeningDemos/Demo6/noisy-p232_343.wav',
+					cover : 'images/6.jpg',
+					types:'noisy'
 				}
 			],
 			error : function(meg){
@@ -184,13 +194,13 @@ var model = $(".m_model");//获取播放器1下一首a元素按钮
 model.click(function(){
 	$(".model").children().removeClass("model_hover");
 	$(this).addClass("m_model model_hover");
-	songSelect=parseInt($(this).attr("data-no"))-1;
 	audioFn.loadFile(1);
 });
 
 $(".dm_model").click(function(){
 	$(".demomodel").children().removeClass("dmodel_hover");
 	$(this).addClass("dm_model dmodel_hover");
+	songSelect=parseInt($(this).attr("title"))-1;
 	audioFn.loadFile(1);
 });
 
