@@ -256,20 +256,11 @@
 			}
 			//先停止播放
 			fn.play(false);
-			debugger;
 			var song = _default.song[songSelect];
-			var  arrays=song['src'].split("/");
-			var srcs=arrays[0];
-
-			
-			
-			var datasrrc=parseInt($(".dmodel_hover")[0].title);//sample1
-			//HATFANet/ListeningDemos/sample1/noisy_demo_1_p232_343.wav
-			var newsrcs= "HATFANet/ListeningDemos/sample"+datasrrc+"/"+song["types"]+"_demo_"+datasrrc+"_"+$(".dmodel_hover")[0].dataset.title+".wav"
-
-			song['src']=newsrcs;
-			song.cover="HATFANet/images/"+datasrrc+".jpg";
-			song['title']="demo"+datasrrc;
+			var datasrrc=$(".model_hover")[0].title;
+	
+			song['src']=song['src'].replace(song['types'],datasrrc);
+			song['types']=datasrrc;
 			if(song['src']){
 
 				//音频格式,如果路径不是 xxx/xxx.mp3 而是一个url路由这时候如果判断? 例如 xxxx.php?sid=1
@@ -294,14 +285,15 @@
 			
 			//.audio-main-left
 			$(".audio-main-left")[0].style.backgroundImage = 'url("'+song.cover.replace(".jpg","_bg.jpg")+'")';
-			elem.songTitle.innerText = song.title+'-'+song.types;
+			elem.songTitle.innerText = song.title+'-'+$(".model_hover")[0].innerText;
 		
-			$("#playerimg")[0].src=song.cover.replace(songSelect+1,datasrrc);
-			$(".introtitle")[0].innerText= song.title+'-'+song.types;
+			$("#playerimg")[0].src=song.cover;
+		
+			$(".introtitle")[0].innerText= song.title+'-'+$(".model_hover")[0].innerText;
 			
-			$(".model").children().removeClass("model_hover");
+			$(".demomodel").children().removeClass("dmodel_hover");
 		
-			$(".model a")[songSelect].className="m_model model_hover";
+			$(".demomodel a")[songSelect].className="dm_model dmodel_hover";
 			
 			//总时长
 			(function getDuration(){
